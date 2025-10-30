@@ -8,7 +8,7 @@ Contenu principal
 - `utiles.py`  : classes principales — `LeclercScraper` (Selenium) et `DBManager` (SQLite).
 - `front.py`   : serveur Flask simple et template HTML/CSS/JS pour afficher les deals.
 - `app.py`     : point d'entrée (si différent de `front.py` dans ce dépôt).
-- `test_selenium.py` : script de test / exemple (si présent).
+- `test_selenium.py` : script de test / exemple .
 - `leclerc.ipynb` : carnet Jupyter avec expérimentations.
 - `leclerc_deals.db` : base SQLite (générée après exécution du scraper).
 
