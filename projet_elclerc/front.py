@@ -137,11 +137,22 @@ let RAW = [];
 function isPercent(txt){ return txt && /%/.test(txt); }
 function isEuro(txt){ return txt && /€/.test(txt); }
 
+function formatPromo(txt){
+  if(!txt) return txt;
+  const s = String(txt).trim();
+  // garder si déjà préfixé par un tiret (incl. variantes unicode)
+  if(/^[\-\u2212\u2013]/.test(s)) return s;
+  // si contient un chiffre, préfixer d'un '-'
+  if(/\d/.test(s)) return '-' + s;
+  return s;
+}
+
 function badgePromo(txt){
-  if(!txt) return '<span class="badge badge-muted">—</span>';
-  if(isPercent(txt)) return '<span class="badge badge-success">'+txt+'</span>';
-  if(isEuro(txt)) return '<span class="badge badge-info">'+txt+'</span>';
-  return '<span class="badge badge-muted">'+txt+'</span>';
+  const f = formatPromo(txt);
+  if(!f) return '<span class="badge badge-muted">—</span>';
+  if(isPercent(f)) return '<span class="badge badge-success">'+f+'</span>';
+  if(isEuro(f)) return '<span class="badge badge-info">'+f+'</span>';
+  return '<span class="badge badge-muted">'+f+'</span>';
 }
 
 function fillCategoryFilter(){
