@@ -42,7 +42,7 @@ XPATH_NEXT_BUTTON = XPATH_NEXT_LI + "/a"
 # Fiche produit
 XPATH_PRODUCT_DESCRIPTION = "/html/body/main/div/div/div[3]/section[1]/div"
 XPATH_FEATURES_TBODY = "/html/body/main/div/div/div[3]/section[2]/div[1]/table/tbody"
-XPATH_CATEGORY_IN_TABLE = "/html/body/main/div/div/div[3]/section[2]/div[1]/table/tbody/tr[14]/td"  # selon ton exemple
+XPATH_CATEGORY_IN_TABLE = "/html/body/main/div/div/div[3]/section[2]/div[1]/table/tbody/tr[14]/td"  
 
 
 # ---------- DB ----------

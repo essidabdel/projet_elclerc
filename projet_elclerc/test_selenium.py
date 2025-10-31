@@ -6,8 +6,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 print("[DEBUG] lancement...")
 
 opts = Options()
-# IMPORTANT: ne mets pas headless ici, comme ça tu vois si Chrome pop
-# opts.add_argument("--headless=new")  # on le laisse commenté
+
 opts.add_argument("--no-sandbox")
 opts.add_argument("--disable-dev-shm-usage")
 opts.add_argument("--start-maximized")
